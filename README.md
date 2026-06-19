@@ -183,7 +183,7 @@ npm install
 2. **Configure API URL**
 ```javascript
 // src/services/api.js
-const API_BASE_URL = 'http://localhost:8080/api/v1'
+const API_BASE_URL = 'https://employee-management-system-backend-99hu.onrender.com/api/v1'
 ```
 
 3. **Start Development Server**
@@ -256,7 +256,7 @@ DELETE /api/v1/payroll/{id}
 GET   /api/v1/payroll/period
 ```
 
-> 📖 **Full API Documentation**: Available at `http://localhost:8080/swagger-ui.html` and POSTMAN
+> 📖 **Full API Documentation**: Available at `https://employee-management-system-backend-99hu.onrender.com/swagger-ui.html` and POSTMAN
 
 ---
 
