@@ -34,7 +34,7 @@ const EmployeeDashboard = () => {
 
 const fetchAIWelcome = async () => {
   try {
-const response = await fetch('http://localhost:8080/api/v1/auth/welcome-message', {      headers: { 
+const response = await fetch('https://employee-management-system-backend-99hu.onrender.com/api/v1/auth/welcome-message', {      headers: { 
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
         'Accept': 'text/plain'
       }
