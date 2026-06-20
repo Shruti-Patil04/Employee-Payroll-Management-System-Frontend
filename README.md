@@ -1,5 +1,6 @@
 # 🎨 Employee Payroll Management System - Frontend
 
+<<<<<<< HEAD
 <div align="center">
 
 ![React](https://img.shields.io/badge/React-19.1.1-61dafb?style=for-the-badge\&logo=react)
@@ -25,11 +26,25 @@
 * Deployment
 * Performance
 * Future Enhancements
+=======
+## 📌 Overview
+
+The Frontend of the Employee Payroll Management System is developed using React.js and Vite. It provides a modern and responsive user interface for employees and administrators to manage payroll, leave requests, departments, job roles, and employee information.
+
+---
+
+## 🚀 Live Application
+
+Frontend URL:
+
+https://employee-payroll-management-system-ashy.vercel.app
+>>>>>>> e1c4208 (Improve Mobile Responsiveness)
 
 ---
 
 # 📖 Overview
 
+<<<<<<< HEAD
 The Employee Payroll Management System Frontend is a React-based web application that provides an intuitive and responsive interface for managing employees, payroll, departments, job roles, and leave requests.
 
 The frontend communicates with a Spring Boot backend using REST APIs secured through JWT Authentication.
@@ -237,9 +252,89 @@ cd Employee-Payroll-Management-System-Frontend
 ## Install Dependencies
 
 ```bash
-npm install
-```
+=======
+### Authentication
 
+* User Login
+* Employee Registration
+* JWT Token Handling
+* Logout Functionality
+* Role Based Navigation
+
+### Employee Features
+
+* Dashboard
+* Profile Management
+* Leave Application
+* Leave History
+* Payroll Details
+
+### Admin Features
+
+* Employee Management
+* Department Management
+* Job Role Management
+* Leave Approval/Rejection
+* Payroll Processing
+* Dashboard Analytics
+
+### UI Features
+
+* Responsive Design
+* Bootstrap 5 Styling
+* Protected Routes
+* Dynamic Dashboard
+* Modern User Experience
+
+---
+
+## 🛠️ Technology Stack
+
+* React 19
+* React Router DOM
+* Axios
+* Bootstrap 5
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+---
+
+## 📂 Project Structure
+
+src/
+
+├── components/
+
+├── context/
+
+├── hooks/
+
+├── services/
+
+├── utils/
+
+├── App.jsx
+
+├── main.jsx
+
+└── index.css
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+git clone <frontend-repository-url>
+
+### Install Dependencies
+
+>>>>>>> e1c4208 (Improve Mobile Responsiveness)
+npm install
+
+<<<<<<< HEAD
 ## Configure Backend URL
 
 Update:
@@ -256,11 +351,32 @@ const API_BASE_URL =
 ## Run Development Server
 
 ```bash
+=======
+### Configure Backend URL
+
+src/services/api.js
+
+const API_BASE_URL =
+'https://employee-management-system-backend-99hu.onrender.com/api/v1'
+
+### Start Application
+
+>>>>>>> e1c4208 (Improve Mobile Responsiveness)
 npm run dev
-```
+
+---
+
+## 🌐 Deployment
+
+Platform: Vercel
+
+Production URL:
+
+https://employee-payroll-management-system-ashy.vercel.app
 
 Application runs on:
 
+<<<<<<< HEAD
 ```text
 http://localhost:5173
 ```
@@ -332,11 +448,37 @@ https://employee-payroll-management-system-ashy.vercel.app
 * Responsive UI Design
 * Smooth Navigation Experience
 * Reusable React Components
+=======
+## 🔐 Authentication
+
+The frontend communicates with the backend using JWT Authentication.
+
+Token is stored in Local Storage after successful login.
+
+Authorization Header:
+
+Bearer <JWT_TOKEN>
+
+---
+
+## 📱 Screens
+
+* Login Page
+* Registration Page
+* Admin Dashboard
+* Employee Dashboard
+* Employee Management
+* Department Management
+* Job Role Management
+* Leave Management
+* Payroll Management
+>>>>>>> e1c4208 (Improve Mobile Responsiveness)
 
 ---
 
 # 🧪 Testing
 
+<<<<<<< HEAD
 Frontend Testing Includes:
 
 * UI Testing
@@ -366,3 +508,6 @@ This project is developed for educational and learning purposes.
 ---
 
 ⭐ If you found this project useful, consider giving it a star on GitHub.
+=======
+
+>>>>>>> e1c4208 (Improve Mobile Responsiveness)

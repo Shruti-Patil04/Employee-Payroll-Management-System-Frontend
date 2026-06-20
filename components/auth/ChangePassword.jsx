@@ -37,7 +37,7 @@ const ChangePassword = () => {
       setLoading(true)
 
       await axios.post(
-        'http://localhost:8080/api/v1/auth/change-password',
+        'https://employee-management-system-backend-99hu.onrender.com/api/v1/auth/change-password',
         {
           username: user.username,
           oldPassword: formData.oldPassword,

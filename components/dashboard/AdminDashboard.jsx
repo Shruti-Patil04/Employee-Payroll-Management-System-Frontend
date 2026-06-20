@@ -142,7 +142,7 @@ const leaveStatusChartData = {
 
   const fetchAIWelcome = async () => {
   try {
-const response = await fetch('http://localhost:8080/api/v1/auth/welcome-message', {      headers: { 
+const response = await fetch('https://employee-management-system-backend-99hu.onrender.com/api/v1/auth/welcome-message', {      headers: { 
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
         'Accept': 'text/plain'
       }
@@ -284,7 +284,7 @@ setChartData({
 
   return (
     <div className="page-transition">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
         <h1 className="h3 mb-0 text-gradient">Admin Dashboard</h1>
         <div className="text-muted">
           <i className="bi bi-calendar3 me-2"></i>
@@ -299,7 +299,7 @@ setChartData({
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               color: 'white'
             }}>
-              <div className="d-flex align-items-center">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center">
                 <i className="bi bi-robot me-3" style={{ fontSize: '1.5rem' }}></i>
                 <div>
                   <h6 className="mb-1">🤖 AI Assistant</h6>
@@ -312,7 +312,7 @@ setChartData({
       )}
 
       <div className="row g-4 mb-4">
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Total Employees"
             value={dashboardData.totalEmployees}
@@ -322,7 +322,7 @@ setChartData({
             subtitle="Working Employees"
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Pending Leaves"
             value={dashboardData.pendingLeaves}
@@ -332,7 +332,7 @@ setChartData({
             subtitle="Awaiting approval"
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Recent Payrolls"
             value={dashboardData.recentPayrolls}
@@ -342,7 +342,7 @@ setChartData({
             subtitle="Last 30 days"
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Active Employees"
             value={dashboardData.activeEmployees}
@@ -362,9 +362,9 @@ setChartData({
                 Quick Actions
               </h5>
             </div>
-            <div className="card-body">
+            <div className="card-body" style={{ height: "300px" }}>
               <div className="row g-3">
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-primary w-100 p-3"
                     onClick={() => navigate('/employees/new')}
@@ -373,7 +373,7 @@ setChartData({
                     Add New Employee
                   </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-success w-100 p-3"
                     onClick={() => navigate('/payroll/new')}
@@ -382,7 +382,7 @@ setChartData({
                     Generate Payroll
                   </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-warning w-100 p-3"
                     onClick={() => navigate('/leaves/approval')}
@@ -391,7 +391,7 @@ setChartData({
                     Approve Leaves
                   </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-info w-100 p-3"
                     onClick={() => navigate('/departments/new')}
@@ -408,7 +408,7 @@ setChartData({
         
       </div>
       <div className="row g-4 mt-2">
-  <div className="col-lg-6">
+  <div className="col-lg-6 col-md-12">
     <div className="card">
       <div className="card-header">
         <h5 className="mb-0">
@@ -416,13 +416,19 @@ setChartData({
           Employee Statistics
         </h5>
       </div>
-      <div className="card-body">
-        <Bar data={employeeChartData} />
+      <div className="card-body" style={{ height: "300px" }}>
+        <Bar
+  data={employeeChartData}
+  options={{
+    responsive: true,
+    maintainAspectRatio: false
+  }}
+/>
       </div>
     </div>
   </div>
 
-  <div className="col-lg-6">
+  <div className="col-lg-6 col-md-12">
     <div className="card">
       <div className="card-header">
         <h5 className="mb-0">
@@ -430,7 +436,7 @@ setChartData({
           Leave & Payroll Overview
         </h5>
       </div>
-      <div className="card-body">
+      <div className="card-body" style={{ height: "300px" }}>
         <Pie
   data={leaveChartData}
   options={{
@@ -449,35 +455,53 @@ setChartData({
 
 <div className="row g-4 mt-3">
 
-  <div className="col-lg-6">
+  <div className="col-lg-6 col-md-12">
     <div className="card">
       <div className="card-header">
         Department Wise Employees
       </div>
-      <div className="card-body">
-        <Bar data={departmentChartData} />
+      <div className="card-body" style={{ height: "300px" }}>
+        <Bar
+  data={departmentChartData}
+  options={{
+    responsive: true,
+    maintainAspectRatio: false
+  }}
+/>
       </div>
     </div>
   </div>
 
-  <div className="col-lg-3">
+  <div className="col-lg-3 col-md-6 col-sm-12">
     <div className="card">
       <div className="card-header">
         Payroll Status
       </div>
-      <div className="card-body">
-        <Pie data={payrollChartData} />
+      <div className="card-body" style={{ height: "300px" }}>
+       <Pie
+  data={payrollChartData}
+  options={{
+    responsive: true,
+    maintainAspectRatio: false
+  }}
+/>
       </div>
     </div>
   </div>
 
-  <div className="col-lg-3">
+  <div className="col-lg-3 col-md-6 col-sm-12">
     <div className="card">
       <div className="card-header">
         Leave Status
       </div>
-      <div className="card-body">
-        <Pie data={leaveStatusChartData} />
+      <div className="card-body" style={{ height: "300px" }}>
+       <Pie
+  data={leaveStatusChartData}
+  options={{
+    responsive: true,
+    maintainAspectRatio: false
+  }}
+/>
       </div>
     </div>
   </div>

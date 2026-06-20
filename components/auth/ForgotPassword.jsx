@@ -28,7 +28,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/api/v1/auth/forgot-password',
+        'https://employee-management-system-backend-99hu.onrender.com/api/v1/auth/forgot-password',
         formData
       )
 

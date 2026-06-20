@@ -25,15 +25,33 @@ import LandingPage from './components/LandingPage'
 import ChangePassword from './components/auth/ChangePassword'
 import ForgotPassword from './components/auth/ForgotPassword'
 
+import React, { useState } from 'react'
+
 const AppLayout = ({ children }) => {
+
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <div className="app-container">
-      <Sidebar />
+
+      <Sidebar sidebarOpen={sidebarOpen} />
+
       <div className="main-content">
+
+        {/* Mobile Menu Button */}
+        <button
+          className="btn btn-primary d-md-none mb-3"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          <i className="bi bi-list"></i>
+        </button>
+
         <Header />
+
         <div className="content-area">
           {children}
         </div>
+
       </div>
     </div>
   )

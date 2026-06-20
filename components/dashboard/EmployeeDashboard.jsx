@@ -116,7 +116,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
 
   return (
     <div className="page-transition">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
         <div>
           <h1 className="h3 mb-0 text-gradient">Welcome, {employeeData?.firstName}!</h1>
           <p className="text-muted mb-0">{employeeData?.jobTitle || 'Employee'} • {employeeData?.departmentName || 'No Department'}</p>
@@ -134,7 +134,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               color: 'white'
             }}>
-              <div className="d-flex align-items-center">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center">
                 <i className="bi bi-robot me-3" style={{ fontSize: '1.5rem' }}></i>
                 <div>
                   <h6 className="mb-1">🤖 AI Assistant</h6>
@@ -147,7 +147,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
       )}
 
       <div className="row g-4 mb-4">
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Leave Balance"
             value={dashboardStats.leaveBalance}
@@ -156,7 +156,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
             subtitle="Days remaining"
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Pending Leaves"
             value={dashboardStats.pendingLeaves}
@@ -166,7 +166,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
             subtitle="Awaiting approval"
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Recent Payrolls"
             value={dashboardStats.recentPayrolls}
@@ -176,7 +176,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
             subtitle="Last 30 days"
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DashboardCard
             title="Leaves Taken"
             value={dashboardStats.totalLeavesTaken}
@@ -188,7 +188,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
       </div>
 
       <div className="row g-4">
-        <div className="col-lg-8">
+        <div className="col-lg-8 col-md-12">
           <div className="card">
             <div className="card-header">
               <h5 className="card-title mb-0">
@@ -198,7 +198,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
             </div>
             <div className="card-body">
               <div className="row g-3">
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-primary w-100 p-3"
                     onClick={() => navigate('/leaves/new')}
@@ -207,7 +207,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
                     Apply for Leave
                   </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-success w-100 p-3"
                     onClick={() => navigate('/payroll')}
@@ -216,7 +216,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
                     View Payslips
                   </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-info w-100 p-3"
                     onClick={() => navigate(`/employees/profile/${employeeData?.employeeId}`)}
@@ -225,7 +225,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
                     My Profile
                   </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <button 
                     className="btn btn-outline-warning w-100 p-3"
                     onClick={() => navigate('/leaves')}
@@ -239,7 +239,7 @@ const response = await fetch('https://employee-management-system-backend-99hu.on
           </div>
         </div>
 
-        <div className="col-lg-4">
+        <div className="col-lg-4 col-md-12">
           <div className="card h-100">
             <div className="card-header">
               <h5 className="card-title mb-0">

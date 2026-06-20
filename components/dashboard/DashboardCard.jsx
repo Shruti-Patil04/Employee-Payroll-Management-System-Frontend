@@ -13,7 +13,7 @@ const DashboardCard = ({
   
   return (
     <div className={cardClass} onClick={onClick}>
-      <div className="row align-items-center">
+      <div className="row align-items-center text-center text-md-start">
         <div className="col">
           <div className={`text-${color} fw-bold fs-6`}>{title}</div>
           <div className="fs-2 fw-bold text-dark">{value}</div>
@@ -27,7 +27,7 @@ const DashboardCard = ({
             </div>
           )}
         </div>
-        <div className="col-auto">
+        <div className="col-12 col-md-auto mt-3 mt-md-0">
           <i className={`bi ${icon} icon text-${color}`}></i>
         </div>
       </div>
